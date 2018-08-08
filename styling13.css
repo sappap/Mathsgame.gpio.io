@@ -1,0 +1,262 @@
+/*need to link .css file inside html file using 'link' inside html tag element*/
+
+/*now style background of our page, so to style whole page , we are gonna select 'html' element.*/
+
+html{
+/*    so to style whole page , we are gonna select 'html' element.*/
+    
+    height:100%;
+    
+    background: radial-gradient (circle, #fff, #ccc);
+    
+/*       to get a gardient (shape,color,color)*/ 1.
+    
+}
+
+#container{
+    
+/*    showing conainer style here 5.*/
+    
+    height: 600px;
+    width: 550px;
+    background-color: #9DD2EA;
+    
+/*    TO MAKE A a container middle use  'margin property' [top bottom left right]*/
+    margin: 100px auto;
+    
+/*
+    100px=top-bottom
+    auto=left-right , become bigger as we add another boxes inside
+*/
+    
+/*    padding for create space between border and element inside*/
+    padding:20px;
+    
+    
+/*    to style corner of a container use 'border-radius'*/
+    
+    border-radius: 20px;
+    
+    position: relative;  /*        7.*/
+}
+
+#score{
+    
+    background-color: #F1FF92;
+    
+/*    need to add text color*/
+    color: #888E5F;
+    
+/*    ADD SOME padding: to text*/
+    
+    padding: 10px;
+    
+/*    lets move box: position abolsute realtive to container*/
+    
+    position: absolute; /*        8.*/
+    
+/*    top=0,left=0, we want score box to right, chnaged left property---score box shifted to left*/
+    
+    left: 500px;
+    
+}
+
+#correct{
+/*    position of correct box realative to container position @7*/
+    position: absolute;
+    
+    left: 250px;  /*    move left 250px*/
+    background-color: #42e252;  /*    nice green color*/
+    color: white;  /*        text color white*/
+        
+    padding: 11px; /*        padding to get space between text and boarders*/
+    
+    display: none;  
+    
+/*    shows when its correct--now none display*/ 
+}
+
+#wrong{
+/*    position of wrong box/Try again realative to container position @7*/
+    position: absolute;
+    
+    left: 160px;  /*    move left 150px*/
+    background-color: #de401a;  /*    nice red color*/
+    color: white;  /*        text color white*/
+        
+    padding: 11px; /*        padding to get space between text and boarders*/
+    
+        display: none;
+    
+/*    shows when its wrong--now none display*/
+}
+
+#question{
+    
+    width: 400px;
+    height: 180px;
+    
+/*    to get centre in page use'margin' top,left,right margin must be auto and some bottom margin*/
+/*    margin: top right bottom left*, here left and right auto w.r.t container size and centre bacuse of auto*/
+    
+    margin: 50px auto 10px auto;
+    background-color: #9DA0EA;
+    
+/*    BOX SHDADOW:0px vertical and 4px horizontal and color horizontal */
+    
+    box-shadow: 0px 4px #535aa8;
+    font-size: 100px;
+    
+/*    to make display of quastion in centre use 'text-align'*/
+    
+    text-align: center; 
+    
+    
+    /*    font-family: cursive;*/
+    
+    
+    color: black     /*        text color black*/        
+}
+#instrunction{
+    
+    width: 400px;
+    height: 50px;
+    
+    background-color: #B481D9;
+    
+/*    now margin property to make centre*/
+/*    margin: top and bottom =10px for gap,  left,right=auto w.r.t container box*/
+    margin: 10px auto;
+    
+    text-align: center;   /*    to make centre text inside instrucmtion box*/
+    
+    line-height: 40px;   /*    use to make height of a line of a text*/
+}
+
+#choices{
+    
+    height: 100px;
+    width: 450px;
+    
+    /*    now margin property to make centre*/
+/*    margin: top and bottom =5px for gap,  left,right=auto w.r.t container box*/
+    
+    margin: 5px auto;
+}
+.box{
+/*    coomon class of boxes, each has all same */
+    
+    height: 80px;
+    width: 80px;
+    background-color: white;
+    
+/*    to move all boxes use 'float'*/
+    float: left;
+    
+/*    to make boxes gap "margin-right: with gap px nad need to change value"*/
+    margin-right: 30px;
+    
+    border-radius: 4px;
+    
+/*    when cursor point to box it will get hover*/
+    cursor: pointer;
+    text-align: center;
+    
+/*    to make each box text height vertically by 80px*/
+    line-height: 80px;
+    
+    position: relative; /*     8.*/
+    
+    -webkit-transition: all 0.2s; /*    when you click on box it has some transisiton of 0.2 second*/
+}
+
+.box:hover, #startreset:hover{      
+/*    here two things are doing hover*/
+    
+/*    to hover all 4boxes with color chnages in boxes*/
+    background-color: #9C89F6;
+    
+        
+/*    TEXT bceome white when hover by cursor*/
+    
+    color: white;
+        
+}
+
+.box:active, #startreset:active{      
+/*    here two things are doing*/
+
+/*    when click on box it goes down realtive position to box 9.*/
+    top: 4px;
+}
+
+#box4{
+/*    box 4 has need to go right using keep "margin-right: 0*/
+    margin-right:0;
+
+}
+
+#startreset{
+    
+    /*    coomon class of boxes, each has all same */
+    
+   
+    width: 77px;
+/*    height: 60px;*/
+    
+    background-color: white;
+    
+    margin: 0 auto;
+    
+/*    top,bottom =0, left-rigth=auto, makes center*/
+    
+    padding: 5px;
+
+    border-radius: 4px;
+    
+/*    when cursor point to box it will get hover*/
+    cursor: pointer;
+    text-align: center;
+    
+/*    to make each box text height vertically by 80px*/
+    line-height: 80px;
+    
+    position: relative; /*     8.*/
+}
+#timeremaining{
+    
+    width: 190px;
+    padding:10px;
+    
+    position: absolute; /*    its inside in a container*/
+    
+    top: 450px; /*    from top 450px , come to line of 'start game'button*/
+    
+    left: 388px; /*    now move to left corner of container*/
+    background-color: rgba( 199, 238, 83, 0.32 );
+/*    above color by :alt-command-k*/
+    border-radius: 3px;
+
+/*    visibility: hidden;      here hide an element*/
+    display: none;
+
+}
+
+#gameover{
+    
+    height: 200px;
+    width: 500px;
+    
+/*    background: linear-gradient(first-top color,2nd color-bottom)*/
+    background: linear-gradient(#F3CA6B, #F3706C);
+    color: white;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase; /*    all text will go in upper case*/
+    position: absolute; /*    absolute wrt continer now need move top and left*/
+    top: 135px; /*    from top 135px*/
+    left: 30px; /*    from left it goes 20px*/
+    z-index: 2; /*    gives this '2' div top of an other element*/
+    display: none; /*    need to hide it gameover div box*/
+    
+}

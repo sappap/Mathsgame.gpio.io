@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+
+<html lang="eng"> <!--    here i added attribure-->
+
+
+<head>
+    
+   <tittle> Maths Game </tittle> 
+    
+    <meta charset ="utf-8">
+    
+    <meta name= "viewport" content="width=device-width ,initial-scale=1, user-scalable=yes">
+    
+    
+    <!--    elment=viewport, properties=width of viewport, scale=1, [zoom level start from 1], zoom in /out/scalable -yes-->
+    
+    <link rel="stylesheet"  href="styling13.css"> <!--    'link 'related to stylsheet, link .css file in this html file insisde 'head' tag-->
+    
+    
+</head>
+    
+    
+    
+    <body>
+    
+<!--        inside body elemnts we are making container using 'div' 3.-->
+        
+        <div id="container">
+            
+<!--            style this container in styling.css using this 'id' 4.-->
+            
+        
+            
+        <div id="score"> <!--        now inside container box there is 'Score' box use 'div' and id 6.-->
+            
+<!--            'Score' change while playing game place inside 'span' and give 'id' to manipulate with 'js' 7.-->
+            
+            Score: <span id="scorevalue"> 0 </span>
+            
+<!--            this id shows in styling sheet -->
+            
+            </div>
+
+            
+        <div id="correct"> Correct </div> 
+            
+<!--            feedback msg 'correct' /'Trt again' inside container box 'div' 8.-->
+            
+            <div id="wrong"> Try again </div> <!--            feedback msg 9.-->
+            
+            
+            <div id="question">  </div> <!--            here we are creating question box 10. and style usind id in .css file-->
+            
+            <div id="instrunction"> Click on correct answer </div>     <!--            now create instrunction box and style it using 'id' in .css file-->
+            
+            
+            <div id="choices">  <!--            inside choices div need to make 4 div for boxes-->
+            
+                
+            <div id="box1" class="box"> </div> <!--             for all the 4 boxes class name same for styling 4 box together-->
+                
+            <div id="box2" class="box"></div> 
+            
+            <div id="box3" class="box"></div> 
+                
+            <div id="box4" class="box"></div> 
+                
+            
+            </div>
+            
+<div id="startreset"> Start Game</div>  <!--           start game button create inside conainer box and using id style in .css -->
+            
+<div id="timeremaining"> Time reamining: <span id="time-remaining-value"> 60</span> sec</div>      
+
+            <!--            here creating Time remaining button with id, and time changing kept umder span element with span id for 'js'-->
+            
+            <div id="gameover">
+                
+                
+            
+            </div>
+            
+        </div>
+        
+<!--        after end container 'div' box, we are making javascript file under attribute 'src' which has location of a js file-->
+    
+        <script src="javascript12.js">
+        
+        
+        </script>
+    
+    
+    </body>
+
+</html>
